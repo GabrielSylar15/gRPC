@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
+    <body>
+        <div layout:fragment="content" class="container">
+            <h1>
+                Product            
+             </h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product ID</th>
+                        <th scope="col">Product Name</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="p : ${list}" scope="row">
+                        <td th:text="${p.productId}"></td>
+                        <td th:text="${p.productName}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
+
