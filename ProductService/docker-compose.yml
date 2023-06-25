@@ -1,20 +1,7 @@
 version: "3.8"
-services:
-    container-name: product-service
-    image: adoptopenjdk/openjdk8
-    ports:
-      - 8080:8080
-    working_dir: /app
-    build:
-      dockerfile: Dockerfile
-      context: .
-    restart: always
-    networks:
-      - mynetwork
-    volumes:
 
+services:
   mysql:
-    container_name: mysql
     image: mysql
     ports:
       - 3306:3306
@@ -22,16 +9,28 @@ services:
     networks:
       - mynetwork
     environment:
-      - MYSQL_ROOT_PASSWORD: 123456
+      - MYSQL_ROOT_PASSWORD=123456
     volumes:
-      - shared-data: /var/lib/mysql
+      - shared-data:/var/lib/mysql
+
+  product-service:
+    ports:
+      - 8080:8080
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    networks:
+      - mynetwork
 
 networks:
     mynetwork:
       driver: bridge
+
 volumes:
   shared-data:
     driver_opts:
-      device: /mycode/sites
+      device: ../mycode/demo-gRPC
       o: bind
+      type: bind
 

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.devProblems;
+
+service ProductCRUD{
+	rpc SelectAll(Empty) returns (Product);
+}
+
+message Empty{
+
+}
+
+message Product{
+	int32 productId = 1;
+	string productName = 2;
+}
+
+message Products{
+	repeated Product items = 1;
+}
+
