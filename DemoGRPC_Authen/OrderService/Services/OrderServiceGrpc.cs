@@ -6,10 +6,9 @@ using OrderService.Models;
 
 namespace OrderService.Services
 {
-    public class OrderService : OrderCRUD.OrderCRUDBase
+    public class OrderServiceGrpc : OrderCRUD.OrderCRUDBase
     {
         OrderServiceContext _context = new OrderServiceContext();
-        [Authorize]
         public override async Task<Orders> SelectAll(Empty request, ServerCallContext context)
         {
             Orders response = new Orders();

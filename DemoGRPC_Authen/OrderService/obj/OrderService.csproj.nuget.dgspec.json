@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Sem8\\PRN231\\DemoGRPC\\OrderService\\OrderService.csproj": {}
+    "E:\\AdvancedWeb\\Back-end\\Microservice\\DemoGRPC_Authen\\OrderService\\OrderService.csproj": {}
   },
   "projects": {
-    "E:\\Sem8\\PRN231\\DemoGRPC\\OrderService\\OrderService.csproj": {
+    "E:\\AdvancedWeb\\Back-end\\Microservice\\DemoGRPC_Authen\\OrderService\\OrderService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Sem8\\PRN231\\DemoGRPC\\OrderService\\OrderService.csproj",
+        "projectUniqueName": "E:\\AdvancedWeb\\Back-end\\Microservice\\DemoGRPC_Authen\\OrderService\\OrderService.csproj",
         "projectName": "OrderService",
-        "projectPath": "E:\\Sem8\\PRN231\\DemoGRPC\\OrderService\\OrderService.csproj",
+        "projectPath": "E:\\AdvancedWeb\\Back-end\\Microservice\\DemoGRPC_Authen\\OrderService\\OrderService.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\Sem8\\PRN231\\DemoGRPC\\OrderService\\obj\\",
+        "outputPath": "E:\\AdvancedWeb\\Back-end\\Microservice\\DemoGRPC_Authen\\OrderService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -80,6 +80,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.17.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
