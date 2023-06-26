@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package greet;
+option csharp_namespace = "OrderService";
+service OrderCRUD{
+	rpc SelectAll(Empty) returns (Orders);
+}
+
+message Empty{
+
+}
+
+message Order{
+	int32 orderId = 1;
+	string orderName = 2;
+}
+
+message Orders{
+	repeated Order items = 1;
+}
+

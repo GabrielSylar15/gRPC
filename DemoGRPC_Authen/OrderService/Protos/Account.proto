@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "AccountService";
+
+package greet;
+
+service AccountAuthen {
+  rpc Login (AccountRequest) returns (Token);
+  rpc Signin (AccountSignin) returns (AccountSignin);
+}
+
+
+message AccountRequest{
+	string userName = 1;
+	string password = 2;
+}
+
+message Token{
+	string jwtToken = 1;
+}
+
+message AccountSignin{
+	string userName = 1;
+	string password = 2;
+	string email = 3;
+}
