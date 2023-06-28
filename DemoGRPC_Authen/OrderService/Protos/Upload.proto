@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package upload;
+
+service Uploader{
+	rpc UploadFile(stream UploadFileRequest) returns (UploadFileResponse);
+}
+
+message UploadFileRequest{
+	FileMetadata metaData = 1;
+	bytes data = 2;
+}
+
+message UploadFileResponse{
+	string id = 1;
+}
+
+message FileMetadata{
+	string fileName = 1;
+}

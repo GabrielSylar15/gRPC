@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/Download.cs \
+obj\Debug\net6.0\Protos/DownloadGrpc.cs: Protos/Download.proto

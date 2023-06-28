@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package download;
+
+service Downloader{
+	rpc Download(DownloadFileRequest) returns (stream DownloadFileResponse);
+}
+
+message DownloadFileResponse{
+	FileMetadata metaData = 1;
+	bytes data = 2;
+}
+
+message DownloadFileRequest{
+	string id = 1;
+}
+
+message FileMetadata{
+	string fileName = 1;
+}

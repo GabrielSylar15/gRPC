@@ -59,8 +59,6 @@ namespace OrderService
                 options.Password.RequiredUniqueChars = 1; // Số ký tự riêng biệt
             });
 
-
-
             var app = builder.Build();
             app.UseAuthentication();
             app.UseAuthorization();
@@ -68,6 +66,8 @@ namespace OrderService
             app.MapGrpcService<GreeterService>();
             app.MapGrpcService<AuthenticationService>();
             app.MapGrpcService<OrderServiceGrpc>();
+            app.MapGrpcService<UploadService>();
+            app.MapGrpcService<DownloadService>();
 
             app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 

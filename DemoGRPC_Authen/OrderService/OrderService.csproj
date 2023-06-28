@@ -10,13 +10,17 @@
 
   <ItemGroup>
     <None Remove="Protos\Account.proto" />
+    <None Remove="Protos\Download.proto" />
     <None Remove="Protos\Order.proto" />
+    <None Remove="Protos\Upload.proto" />
   </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="Protos\Account.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\Download.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\Order.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\Upload.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>
